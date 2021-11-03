@@ -35,7 +35,7 @@
 ### Client 
 - Please SignIn with "username: ozkans, password: 123456" for able to order!
 - For checkout use random address, for test cart number is: "4242 4242 4242 4242, 08/24, 123"!
-- PS: Register page not active yet.
+- PS: Register page not active but not working yet.
 
 ### Admin Dashboard
 -!!! Bug Alert !!! Please after click to link add "/login" end of to the link and login with "username: ozkans, password: 123456" and after login refresh to page!!! It is a JWT token problem, I will fix it soon!
