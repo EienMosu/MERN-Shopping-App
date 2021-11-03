@@ -10,7 +10,7 @@
 - Axios
 - Styled Components
 - Material UI Icons
-- 
+
 ## 2. Api(Back-End)
 - Express
 - MongoDB Atlas
