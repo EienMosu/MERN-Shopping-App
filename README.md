@@ -1,7 +1,7 @@
 # MERN-Shopping-App
 
 ## This Project I Used
-## 1. Client(Front-End_
+## 1. Client(Front-End)
 - React
 - React Router
 - Redux
@@ -33,9 +33,9 @@
 
 ## How to Use;
 ### Client 
-Please SignIn with "username: ozkans, password: 123456" for able to order!
-For checkout use random address, for test cart number is: "4242 4242 4242 4242, 08/24, 123"!
-PS: Register page not valid yet.
+- Please SignIn with "username: ozkans, password: 123456" for able to order!
+- For checkout use random address, for test cart number is: "4242 4242 4242 4242, 08/24, 123"!
+- PS: Register page not valid yet.
 
 ### Admin Dashboard
 
