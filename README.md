@@ -38,7 +38,7 @@
 - PS: Register page not active yet.
 
 ### Admin Dashboard
--!!! Bug Alert! Please after click to link add "/login" end of the link and login with "username: ozkans, password: 123456" and after login refresh to page! It is a JWT token problem, I will fix it soon!
+-!!! Bug Alert !!! Please after click to link add "/login" end of the link and login with "username: ozkans, password: 123456" and after login refresh to page! It is a JWT token problem, I will fix it soon!
 
 
 ### Client: https://reverent-beaver-92a886.netlify.app/
