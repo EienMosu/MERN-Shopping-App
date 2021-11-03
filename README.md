@@ -35,7 +35,7 @@
 ### Client 
 - Please SignIn with "username: ozkans, password: 123456" for able to order!
 - For checkout use random address, for test cart number is: "4242 4242 4242 4242, 08/24, 123"!
-- PS: Register page not valid yet.
+- PS: Register page not active yet.
 
 ### Admin Dashboard
 
