@@ -33,8 +33,8 @@
 
 ## How to Use;
 ### Client 
-- Please SignIn with "username: ozkans, password: 123456" for able to order!
-- For checkout use random address, for test cart you can use: "4242 4242 4242 4242, 08/24, 123"!
+- Please SignIn with "username: ozkans, password: 123456" for able to successfull order! Otherwise you will get "Something went wrong!" end of the proccess!
+- For checkout use random address, for test cart you can use: "4242 4242 4242 4242, 08/24, 123"! 
 - PS: Register page not active but not working yet.
 
 ### Admin Dashboard
