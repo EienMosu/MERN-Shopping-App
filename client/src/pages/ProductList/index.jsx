@@ -18,7 +18,7 @@ import {
   Title,
 } from "./ProductList.styles";
 
-const ProductList = () => {
+const ProductList = ({ user }) => {
   const location = useLocation();
   const category = location.pathname.split("/").pop();
 
@@ -36,7 +36,7 @@ const ProductList = () => {
 
   return (
     <Container>
-      <Navbar />
+      <Navbar user={user} />
       <Announcement />
       <Title>{category}</Title>
       <FilterContainer>

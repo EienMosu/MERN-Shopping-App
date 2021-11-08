@@ -25,10 +25,10 @@ function App() {
           <Home user={user} />
         </Route>
         <Route path="/products/:category">
-          <ProductList />
+          <ProductList user={user} />
         </Route>
         <Route path="/product/:id">
-          <SingleProduct />
+          <SingleProduct user={user} />
         </Route>
         <Route path="/cart">
           <Cart user={user} />

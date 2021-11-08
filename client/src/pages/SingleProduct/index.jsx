@@ -35,7 +35,7 @@ import {
   Wrapper,
 } from "./SingleProduct.styles";
 
-const SingleProduct = () => {
+const SingleProduct = ({user}) => {
   const dispatch = useDispatch();
 
   const [product, setProduct] = useState(null);
@@ -45,7 +45,6 @@ const SingleProduct = () => {
 
   const location = useLocation();
   const productId = location.pathname.split("/").pop();
-
 
   useEffect(() => {
     const getProduct = async () => {
@@ -61,14 +60,13 @@ const SingleProduct = () => {
     dispatch(addProduct({ ...product, quantity, color, size }));
   };
 
-  console.log(color);
   return (
     <Container>
       {!product ? (
         <>Loading...</>
       ) : (
         <>
-          <Navbar />
+          <Navbar user={user}/>
           <Announcement />
           <Wrapper>
             <ImageContainer>
