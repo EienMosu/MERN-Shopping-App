@@ -45,7 +45,7 @@ const Success = ({ user }) => {
         {orderId ? (
           <Span>{`Order has been created successfully. Your order number is: ${orderId}`}</Span>
         ) : (
-          <Span>{`Something went wrong!`}</Span>
+          <Span>{`Something went wrong! Please Login first for able to create a successfull order!`}</Span>
         )}
         <Link to="/">
           <Button>Go to Homepage</Button>

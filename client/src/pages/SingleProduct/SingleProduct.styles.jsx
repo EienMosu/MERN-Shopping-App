@@ -118,3 +118,13 @@ export const Button = styled.button`
     color: white;
   }
 `;
+
+export const ErrorContainer = styled.div `
+  display: flex;
+
+`
+export const Error = styled.span `
+  font-size: 16;
+  color: red;
+  margin-top: 50px;
+`

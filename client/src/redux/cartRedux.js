@@ -6,12 +6,22 @@ const cartSlice = createSlice({
     products: [],
     cartQuantity: 0,
     total: 0,
+    found: false,
   },
   reducers: {
     addProduct: (state, action) => {
-      state.cartQuantity += 1;
-      state.products.push(action.payload);
-      state.total += action.payload.price * action.payload.quantity;
+      for (var i = 0; i < state.products.length; i++) {
+        if (state.products[i]._id === action.payload._id) {
+          state.found = true;
+          break;
+        }
+      }
+      if (!state.found) {
+        state.cartQuantity += 1;
+        state.products.push(action.payload);
+        state.total += action.payload.price * action.payload.quantity;
+      }
+      state.found = action.payload.found;
     },
     deleteProduct: (state, action) => {
       state.cartQuantity -= 1;

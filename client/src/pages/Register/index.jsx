@@ -49,11 +49,11 @@ const Register = () => {
             type="email"
             onChange={handleChange}
           />
-          <Input placeholder="Password" type="text" />
+          <Input placeholder="Password" type="password" />
           <Input
             placeholder="Confirm Password"
             name="password"
-            type="text"
+            type="password"
             onChange={handleChange}
           />
           <Agreement>

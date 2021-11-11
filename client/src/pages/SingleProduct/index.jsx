@@ -21,6 +21,8 @@ import {
   Button,
   Container,
   Desc,
+  Error,
+  ErrorContainer,
   Filter,
   FilterColor,
   FilterContainer,
@@ -35,13 +37,13 @@ import {
   Wrapper,
 } from "./SingleProduct.styles";
 
-const SingleProduct = ({user}) => {
+const SingleProduct = ({ user }) => {
   const dispatch = useDispatch();
-
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const [found, setFound] = useState(null);
 
   const location = useLocation();
   const productId = location.pathname.split("/").pop();
@@ -54,10 +56,17 @@ const SingleProduct = ({user}) => {
       } catch (err) {}
     };
     getProduct();
-  }, [productId]);
+
+    return () => {
+      setTimeout(() => {
+        setFound(null);
+      }, 3000);
+    };
+  }, [productId, found]);
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product, quantity, color, size }));
+    setFound(true);
+    dispatch(addProduct({ ...product, quantity, color, size, found }));
   };
 
   return (
@@ -66,7 +75,7 @@ const SingleProduct = ({user}) => {
         <>Loading...</>
       ) : (
         <>
-          <Navbar user={user}/>
+          <Navbar user={user} />
           <Announcement />
           <Wrapper>
             <ImageContainer>
@@ -116,6 +125,9 @@ const SingleProduct = ({user}) => {
                 </AmountContainer>
                 <Button onClick={handleClick}>ADD TO CART</Button>
               </AddContainer>
+              <ErrorContainer>
+                {found && <Error>Product in your cart!</Error>}
+              </ErrorContainer>
             </InfoContainer>
           </Wrapper>
           <Newsletter />
