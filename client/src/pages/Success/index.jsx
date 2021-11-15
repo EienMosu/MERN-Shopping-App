@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+// React Router
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { successOrder } from "../../redux/cartRedux";
+// Axios
 import { userRequest } from "../../requestMethods";
+// Styled Components
 import { Button, Container, Span, Wrapper } from "./Success.styles";
 
 const Success = ({ user }) => {
@@ -11,6 +16,7 @@ const Success = ({ user }) => {
   const cart = location.state.cart;
   const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const createOrder = async () => {
@@ -38,6 +44,8 @@ const Success = ({ user }) => {
     };
     data && createOrder();
   }, [cart, data, currentUser, user]);
+
+  orderId && dispatch(successOrder());
 
   return (
     <Container>

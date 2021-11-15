@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import history from "../history";
 
 const userSlice = createSlice({
   name: "user",
@@ -35,6 +36,8 @@ const userSlice = createSlice({
     registerFailure: (state) => {
       state.isFetching = false;
       state.error = true;
+      history.push("/registerFailure");
+      history.go(0);
     },
   },
 });

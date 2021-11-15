@@ -33,6 +33,7 @@ export const Title = styled.h1`
 
 export const Form = styled.form`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 `;
 
@@ -41,6 +42,10 @@ export const Input = styled.input`
   min-width: 40%;
   margin: 20px 10px 0px 0px;
   padding: 10px;
+
+  :invalid {
+    border: ${(props) => (props.focused ? "1px solid red" : "1px solid black")};
+  }
 `;
 
 export const Agreement = styled.span`
@@ -64,3 +69,5 @@ export const Button = styled.button`
     border: 1px solid teal;
   }
 `;
+
+

@@ -12,12 +12,14 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
+import RegisterFailure from "./pages/RegisterFailure";
 import SingleProduct from "./pages/SingleProduct";
 import Success from "./pages/Success";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
-  
+  console.log(user)
+
   return (
     <Router>
       <Switch>
@@ -39,6 +41,9 @@ function App() {
         </Route>
         <Route path="/success">
           <Success user={user} />
+        </Route>
+        <Route path="/registerFailure">
+          <RegisterFailure />
         </Route>
       </Switch>
     </Router>

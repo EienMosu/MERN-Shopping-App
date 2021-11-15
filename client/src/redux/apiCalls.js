@@ -3,6 +3,7 @@ import {
   loginFailure,
   loginStart,
   loginSuccess,
+  logout,
   registerFailure,
   registerStart,
   registerSuccess,
@@ -25,8 +26,9 @@ export const register = async (dispatch, user) => {
   try {
     const response = await publicRequest.post("/auth/register", user);
 
-    console.log(response)
+    console.log(response);
     dispatch(registerSuccess(response.data));
+    dispatch(logout());
   } catch (err) {
     dispatch(registerFailure());
   }
