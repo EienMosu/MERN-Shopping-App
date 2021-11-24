@@ -66,13 +66,57 @@ export const Button = styled.button`
   }
 `;
 
-export const Error = styled.span `
+export const Error = styled.span`
   color: red;
-`
+`;
 
 export const Link = styled.a`
   margin: 5px 0px;
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
+`;
+
+export const Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const LoginButtonContainer = styled.div`
+  width: 150px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  background-color: ${(props) => props.backgroundColor};
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+`;
+
+export const Icon = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+export const Center = styled.div`
+  margin: 20px 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
+export const Or = styled.div`
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  padding: 10px;
+  color: gray;
+  background-color: white;
+  font-weight: bold;
 `;

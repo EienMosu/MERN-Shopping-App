@@ -57,7 +57,6 @@ const Cart = ({ user }) => {
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
   const dispatch = useDispatch();
-  console.log(cart)
 
   const onToken = (token) => {
     setStripeToken(token);

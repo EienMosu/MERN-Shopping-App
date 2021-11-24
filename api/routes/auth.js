@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+const passport = require("passport");
 
 // REGISTER
 router.post("/register", async (req, res) => {
@@ -54,5 +55,52 @@ router.post("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Third Part Auth Login
+router.get("/login/third/success", (req, res) => {
+  if (req.user) {
+    res.status(200).json({
+      success: true,
+      massage: "successfull",
+      user: req.user,
+      // cookies
+      // cookies: req.cookies
+      // or jwt you can send
+    });
+  }
+});
+
+router.get("/login/third/failed", (req, res) => {
+  res.status(401).json({
+    success: false,
+    massage: "failure",
+  });
+});
+
+router.get("/third/logout", (req, res) => {
+  req.logOut();
+});
+
+// Google
+router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
+
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    successRedirect: "https://reverent-beaver-92a886.netlify.app/",
+    failureRedirect: "/login",
+  })
+);
+
+// Github
+router.get("/github", passport.authenticate("github", { scope: ["profile"] }));
+
+router.get(
+  "/github/callback",
+  passport.authenticate("github", {
+    successRedirect: "https://reverent-beaver-92a886.netlify.app/",
+    failureRedirect: "/login",
+  })
+);
 
 module.exports = router;

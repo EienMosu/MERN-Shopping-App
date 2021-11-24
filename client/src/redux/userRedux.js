@@ -24,6 +24,8 @@ const userSlice = createSlice({
     logout: (state) => {
       state.currentUser = null;
       state.error = false;
+
+      window.open("https://e-commerce-app-1234.herokuapp.com/api/auth/third/logout", "_self");
     },
     registerStart: (state) => {
       state.isFetching = true;

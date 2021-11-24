@@ -1,5 +1,6 @@
 // React Router
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +19,6 @@ import Success from "./pages/Success";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
-  console.log(user)
 
   return (
     <Router>
