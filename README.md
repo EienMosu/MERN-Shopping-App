@@ -37,8 +37,8 @@
 - For checkout use random address, for test cart you can use: "4242 4242 4242 4242, 08/24, 123"! 
 - PS: Register page active!
 
-### Admin Dashboard
--!!! Bug Alert !!! Please after click to the link add "/login" end of to the link and login with "username: ozkans, password: 123456". After login refresh to the page!!! It is a JWT token problem, I will fix it soon!
+<!-- ### Admin Dashboard
+-!!! Bug Alert !!! Please after click to the link add "/login" end of to the link and login with "username: ozkans, password: 123456". After login refresh to the page!!! It is a JWT token problem, I will fix it soon! -->
 
 
 ### Client: https://reverent-beaver-92a886.netlify.app/
